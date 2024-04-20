@@ -115,7 +115,6 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
     /**
      * Displays about page.
      *
@@ -126,7 +125,13 @@ class SiteController extends Controller
         return $this->render('about');
     }
     public function actionSelly(){
-        $a="selly cantik";
-        return $a;
+        $a="selly cantik banget";
+        //dom : http://localhost/basic/web/index.php?r=site/selly
+        // return $a;
+
+        //jika ingin variabel ditampilkan melewati view helloWorld
+        return $this->render('helloWorld',[
+            'a'=>$a
+        ]);
     }
 }
